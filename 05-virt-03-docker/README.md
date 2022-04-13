@@ -64,6 +64,8 @@ nginx        latest    12766a6745ee   2 weeks ago      142MB
 vagrant@server1:~$ docker image tag e0c77fad0dc8 korsh84/nginx:korsh_virt03-1
 vagrant@server1:~$ docker push korsh84/nginx:korsh_virt03-1
 ```
+![скрин](p1.png)
+
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки
 https://hub.docker.com/repository/docker/korsh84/nginx
 
