@@ -9,7 +9,7 @@
       "source_image_family": "centos-7",
       "ssh_username": "centos",
       "subnet_id": "e9bbjarlaek8ssmk5tsj",
-      "token": "AQAAAAAJRNmCAATuwZWtnDi-s0FstLhpc6G0KOw",
+      "token": "___",
       "type": "yandex",
       "use_ipv4_nat": true,
       "zone": "ru-central1-a"
