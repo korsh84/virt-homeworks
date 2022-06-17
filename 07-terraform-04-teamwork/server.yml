@@ -1,0 +1,31 @@
+# repos lists the config for specific repos.
+repos:
+  # id can either be an exact repo ID or a regex.
+  # If using a regex, it must start and end with a slash.
+  # Repo ID's are of the form {VCS hostname}/{org}/{repo name}, ex.
+  # github.com/runatlantis/atlantis.
+- id: github.com/korsh84/.*/
+  # branch is an regex matching pull requests by base branch
+  # (the branch the pull request is getting merged into).
+  # By default, all branches are matched
+  branch: /.*/
+  apply_requirements: [approved, mergeable]
+  workflow: custom
+  allowed_workflows: [custom]
+  
+  # команды для возмоности смены workflow
+  allowed_overrides: [apply_requirements, workflow, delete_source_branch_on_merge]
+  allow_custom_workflows: true
+
+# workflows lists server-side custom workflows
+workflows:
+  custom:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-lock=false"]
+     apply:
+      steps:
+      - run: echo hi
+      - apply

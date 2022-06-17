@@ -1,0 +1,28 @@
+version: 3
+parallel_plan: true
+parallel_apply: true
+projects:
+- dir: korsh-project
+  workspace: prod
+  autoplan:
+    when_modified: ["*.tf"]
+    enabled: true
+  workflow: myworkflow
+- dir: korsh-project
+  workspace: stage
+  autoplan:
+    when_modified: ["*.tf"]
+    enabled: true
+  workflow: myworkflow
+workflows:
+  myworkflow:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-lock==false"]
+    apply:
+      steps:
+      - run: echo hi
+      - apply
+	  
