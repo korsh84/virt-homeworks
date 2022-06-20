@@ -16,17 +16,18 @@
 
 ```
 /terraform-provider-aws/internal/provider/provider.go
-
 #data_source lines 423-901
+DataSourcesMap: map[string]*schema.Resource{
+```
 https://github.com/hashicorp/terraform-provider-aws/blob/3c1f58b59a45aaecc9a4b243d5b1004283b3353b/internal/provider/provider.go#L423
-		DataSourcesMap: map[string]*schema.Resource{
 
-# resource map следом 902-2063
-ResourcesMap: map[string]*schema.Resource{
-
-https://github.com/hashicorp/terraform-provider-aws/blob/3c1f58b59a45aaecc9a4b243d5b1004283b3353b/internal/provider/provider.go#L902
 
 ```
+# resource map следом 902-2063
+ResourcesMap: map[string]*schema.Resource{
+```
+https://github.com/hashicorp/terraform-provider-aws/blob/3c1f58b59a45aaecc9a4b243d5b1004283b3353b/internal/provider/provider.go#L902
+
 
 1. Для создания очереди сообщений SQS используется ресурс `aws_sqs_queue` у которого есть параметр `name`.
     * С каким другим параметром конфликтует `name`? Приложите строчку кода, в которой это указано.
