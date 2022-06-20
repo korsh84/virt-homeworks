@@ -60,7 +60,15 @@ https://github.com/hashicorp/terraform-provider-aws/blob/3c1f58b59a45aaecc9a4b24
 3. Попробуйте скомпилировать провайдер, если получится то приложите снимок экрана с командой и результатом компиляции.   
 
 
-> не сделал
+Делал по инструкции  https://learn.hashicorp.com/tutorials/terraform/provider-setup
+
+Запуск провадйера до изменений
+
+![скрин](ter06_p1.png)
+
+Запуск с наполненным провайдером
+
+![скрин](ter06_p2.png)
 
 ---
 
